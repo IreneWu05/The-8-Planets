@@ -1,0 +1,93 @@
+
+body{  
+    background-color: #00223E; /* appear this color when the browser is not supporting gradient */
+    background-image: linear-gradient(to bottom right, #360033 , #00223E); 
+      
+    height: 100%;  
+    margin: 0;  
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1200px;/*viewpoint*/
+} 
+
+
+section {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    /*set the cursor to a hand when the mouse is on the image*/
+    cursor: pointer;
+    transform-style: preserve-3d;
+    animation: rotate 40s linear infinite; /*set the rotating speed to 40s*/
+}
+
+section:hover{
+    animation-play-state: paused;/*pause rotating when the mouse is on the image*/
+}
+
+
+section div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100;
+    text-align: center;
+
+   /*make a drop reflection for each image, 
+   it'll be placed 30px below the main image*/
+    -webkit-box-reflect: below 30px 
+    -webkit-linear-gradient(transparent 10%, rgba(255, 255, 255, 0.3));
+
+}
+
+
+/*images of the 8 planets*/
+
+/*set all images rotate 45 degress to the y-axis */
+/*move all the images 300px away from the original x-axis to form a circular ring*/
+section div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+section div:nth-child(2) {
+    transform: rotateY(45deg) translateZ(300px);
+
+}
+
+section div:nth-child(3) {
+    transform: rotateY(90deg) translateZ(300px);
+}
+
+section div:nth-child(4) {
+    transform: rotateY(135deg) translateZ(300px);
+}
+
+section div:nth-child(5) {
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+section div:nth-child(6) {
+    transform: rotateY(225deg) translateZ(300px);
+}
+
+section div:nth-child(7) {
+    transform: rotateY(270deg) translateZ(300px);
+}
+
+section div:nth-child(8) {
+    transform: rotateY(315deg) translateZ(300px);
+}
+
+/*define the animation*/
+@keyframes rotate{
+    0%{
+        transform: rotateY(0);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
