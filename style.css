@@ -13,16 +13,104 @@ body{
     perspective: 1200px;/*viewpoint*/
 } 
 
+/* planets*/
+/*/////earth/////*/
+/*let the circle move up and down*/
+.earth{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 20px 20px 80px 20px #00223E inset, 0 0 25px 10px #051a4f;
+    animation: jump 5s ease-in-out infinite;
+}
+            
+/*let the image inside the circle move paralleled*/
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 25px 20px #006fca;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+    background: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New-global-view.max-1000x1000.jpeg);
+    background-size: cover;
+    animation: spin 30s linear alternate infinite;
+  }
+
+
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+@keyframes jump {
+    0%, 100% {
+        top: 10px;
+    }
+    50% {
+        top: 20%;
+    }
+}
+
+
+/*/////mars/////*/
+.mars{
+    width: 85px;
+    height: 85px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 20px 20px 80px 20px #915000 inset, 0 0 50px 10px #6f4706;
+    animation: jump 3s ease-in-out infinite;
+}
+            
+
+  .mars > div {
+    width: 200%;
+    height: 100%;
+    box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 50px 10px #7c5618;
+    background: url(https://www.cloudynights.com/uploads/monthly_09_2020/post-227238-0-85091500-1599858965.jpg);
+    background-size: cover;
+    animation: spin 30s linear alternate infinite;
+  }
+
+@keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+@keyframes jump {
+    0%, 100% {
+        top: 10px;
+    }
+    50% {
+        top: 20%;
+    }
+}
 
 section {
     position: relative;
     width: 300px;
-    height: 200px;
+    height: 300px;
     /*set the cursor to a hand when the mouse is on the image*/
     cursor: pointer;
     transform-style: preserve-3d;
     animation: rotate 40s linear infinite; /*set the rotating speed to 40s*/
 }
+
+
+
 
 section:hover{
     animation-play-state: paused;/*pause rotating when the mouse is on the image*/
@@ -35,17 +123,13 @@ section div {
     top: 0;
     width: 100%;
     height: 100;
-    text-align: center;
 
    /*make a drop reflection for each image, 
    it'll be placed 30px below the main image*/
-    -webkit-box-reflect: below 30px 
+    -webkit-box-reflect: below 60px 
     -webkit-linear-gradient(transparent 10%, rgba(255, 255, 255, 0.3));
-
 }
 
-
-/*images of the 8 planets*/
 
 /*set all images rotate 45 degress to the y-axis */
 /*move all the images 300px away from the original x-axis to form a circular ring*/
