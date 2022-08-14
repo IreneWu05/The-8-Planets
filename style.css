@@ -1,7 +1,7 @@
 
 body{  
     background-color: #00223E; /* appear this color when the browser is not supporting gradient */
-    background-image: linear-gradient(to bottom right, #360033 , #00223E); 
+    background-image: linear-gradient(to bottom right, #000000 , #00223E); 
       
     height: 100%;  
     margin: 0;  
@@ -98,6 +98,94 @@ body{
         top: 20%;
     }
 }
+
+
+
+
+.jupiter{
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 80px 20px #00223E inset, 0 0 100px 40px #4f2f05;
+    animation: jump 5s ease-in-out infinite;
+}
+            
+/*let the image inside the circle move paralleled*/
+  .jupiter > div {
+    width: 200%;
+    height: 100%;
+    box-shadow: 0 0 100px 50px black  inset, 10px 10px 80px 90px #a18d5a;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+    background: url(https://ih0.redbubble.net/image.247200544.9421/flat,800x800,075,f.jpg);
+    background-size: cover;
+    animation: spin 30s linear alternate infinite;
+  }
+
+
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+@keyframes jump {
+    0%, 100% {
+        top: 10px;
+    }
+    50% {
+        top: 20%;
+    }
+}
+
+
+
+.saturn{
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: -30px -30px 80px 20px #00223E inset, 0 0 80px 20px #5c4f3d;
+    animation: jump 5s ease-in-out infinite;
+}
+          
+/*let the image inside the circle move paralleled*/
+  .saturn > div {
+    width: 200%;
+    height: 100%;
+    box-shadow: 0 0 70px 40px black  inset, 10px 10px 80px 90px #908568;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e0763947-6f42-4d09-944f-c2d6f41c415b/dcaift0-422ad564-f7b0-4291-914f-425b9ac29a35.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UwNzYzOTQ3LTZmNDItNGQwOS05NDRmLWMyZDZmNDFjNDE1YlwvZGNhaWZ0MC00MjJhZDU2NC1mN2IwLTQyOTEtOTE0Zi00MjViOWFjMjlhMzUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YYTxK1xSwJxGTBIMLHsgFWiwrdd0W6UqmXy7a5CCnnk);
+    background-size: cover;
+    animation: spin 30s linear alternate infinite;
+  }
+
+
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+@keyframes jump {
+    0%, 100% {
+        top: 10px;
+    }
+    50% {
+        top: 20%;
+}
+}
+
 
 section {
     position: relative;
