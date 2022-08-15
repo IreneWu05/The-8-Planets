@@ -1,0 +1,72 @@
+
+body{  
+    background-color: #00223E; /* appear this color when the browser is not supporting gradient */
+    background-image: linear-gradient(to bottom right, #000000 , #001525);    
+    height: 100%;  
+    margin: 0;  
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1200px;/*viewpoint*/
+} 
+
+.earth{
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 20px 20px 80px 20px #00223E inset, 0 0 25px 10px #051a4f;
+    animation: jump 5s ease-in-out infinite;
+}
+            
+/*let the image inside the circle move paralleled*/
+  .earth > div {
+    width: 200%;
+    height: 100%;
+    box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 25px 20px #006fca;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+    background: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New-global-view.max-1000x1000.jpeg);
+    background-size: cover;
+    animation: spin 30s linear alternate infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+@keyframes jump {
+    0%, 100% {
+        top: 10px;
+    }
+    50% {
+        top: 15%;
+    }
+}
+
+
+.location{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    color: #006fca;
+    padding-top: 180px;
+  }
+
+h1{
+    color: #006fca;
+    font-size: 40px;
+    padding-bottom: 180px;
+    padding-left: 40px;
+}
