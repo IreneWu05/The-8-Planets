@@ -14,12 +14,16 @@ body{
     perspective: 1200px;/*viewpoint*/
 } 
 
+ul.bulletpoint{
+  list-style-type: circle;
+  color: antiquewhite;
+}
+
 .wrapper {
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;/*width of the row*/
-  grid-auto-columns: 30px;
+  grid-auto-rows: 140px;/*width of the row*/
   padding-left: 120px;
   padding-right: 120px;
 }
@@ -117,8 +121,8 @@ h2{
 }
 
 h1{
-  font-family: "Roboto", sans-serif;
-    color: #006fca;
-    font-size: 40px;
-    text-align: center;
+  font-family: "Rubik Dirt", sans-serif;
+  color: #006fca;
+  font-size: 80px;
+  text-align: center;
 }
