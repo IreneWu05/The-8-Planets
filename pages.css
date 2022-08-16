@@ -1,4 +1,5 @@
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start
+font https://www.flaticon.com/uicons/3
 */
 
 body{  
@@ -14,11 +15,97 @@ body{
     perspective: 1200px;/*viewpoint*/
 } 
 
+
 ul.bulletpoint{
   list-style-type: circle;
   color: antiquewhite;
 }
 
+/*home logo/button*/
+.homeicon{
+  position: absolute;
+  font-size: 25px;
+  color: #006fca;
+  left: 90px;
+  top: 60px;
+}
+
+h3:hover {
+  color: #006fca;
+}
+
+h3{
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 110px;
+  top: 45px;
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+
+/*left and right switching buttons*/
+.iconleft{
+  position: absolute;
+  font-size:20px;
+  color: white;
+  left: 106px;
+  top: 378px;
+}
+
+.iconright{
+  position: absolute;
+  font-size:20px;
+  color: white;
+  right: 105px;
+  top: 378px;
+}
+
+.buttonright {
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 0.4;
+    border: none;
+    color: white;
+    display: inline-block;
+    height: 55px;
+    width: 55px;
+    right: 90px;
+    top: 360px;
+    border-radius: 100px;
+    cursor: pointer;
+ }
+
+ .buttonright:hover {
+  background-color: white;
+  opacity: 0.6;
+  filter: drop-shadow(0px 2px 16px #ffffff);/*left-right, up-down, blur*/
+}
+
+.buttonleft{
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0.4;
+  border: none;
+  color: white;
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  left: 90px;
+  top: 360px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.buttonleft:hover {
+background-color: white;
+opacity: 0.6;
+filter: drop-shadow(0px 2px 16px #ffffff);/*left-right, up-down, blur*/
+}
+
+/*grid*/
 .wrapper {
   justify-content: center;
   display: grid;
@@ -57,7 +144,7 @@ ul.bulletpoint{
 }
 
 
-
+/*planet animation*/
 .earth{
     width: 200px;
     height: 200px;
@@ -98,13 +185,7 @@ ul.bulletpoint{
     }
 }
 
-
-/*.location{
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-}*/
-
+/*text styling setup*/
 p{
     font-family: "Roboto", sans-serif;
     color: #006fca;
@@ -126,3 +207,4 @@ h1{
   font-size: 80px;
   text-align: center;
 }
+
