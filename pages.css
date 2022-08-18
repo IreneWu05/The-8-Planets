@@ -3,90 +3,69 @@ font https://www.flaticon.com/uicons/3
 */
 
 body{  
-    background-color: #00223E; /* appear this color when the browser is not supporting gradient */
-    background-image: linear-gradient(to bottom right, #000000 , #001525);  
-    height: 100%;  
-    margin: 0;  
-    padding:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    perspective: 1200px;/*viewpoint*/
+  background-color: #00223E; /* appear this color when the browser is not supporting gradient */
+  background-image: linear-gradient(to bottom right, #000000 , #001525);  
+  height: 100%;  
+  margin: 0;  
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1200px;/*viewpoint*/
 } 
 
 
 ul.bulletpoint{
-  list-style-type: circle;
-  color: rgb(255, 250, 243);
+list-style-type: circle;
+color: rgb(255, 250, 243);
 }
 
 /*home logo/button*/
 .homeicon{
-  position: absolute;
-  font-size: 25px;
-  color: #f7f7f7;
-  left: 90px;
-  top: 55px;
+position: absolute;
+font-size: 25px;
+color: #f7f7f7;
+left: 90px;
+top: 55px;
 }
 
 h3:hover {
-  color: #006fca;
-  font-weight: 400;
+color: #006fca;
+font-weight: 400;
 }
 
 h3{
-  font-family: 'Gantari', sans-serif;
-  font-weight: 100;
-  color: white;
-  font-size: 15px;
-  position: absolute;
-  left: 110px;
-  top: 45px;
-  padding-left: 12px;
-  cursor: pointer;
+font-family: 'Gantari', sans-serif;
+font-weight: 100;
+color: white;
+font-size: 15px;
+position: absolute;
+left: 110px;
+top: 45px;
+padding-left: 12px;
+cursor: pointer;
 }
 
 
 /*left and right switching buttons*/
 .iconleft{
-  position: absolute;
-  font-size:20px;
-  color: white;
-  left: 106px;
-  top: 378px;
+position: absolute;
+font-size:20px;
+color: white;
+left: 106px;
+top: 378px;
 }
 
 .iconright{
-  position: absolute;
-  font-size:20px;
-  color: white;
-  right: 105px;
-  top: 378px;
+position: absolute;
+font-size:20px;
+color: white;
+right: 105px;
+top: 378px;
 }
 
 .buttonright {
-    position: absolute;
-    background-color: #ffffff;
-    opacity: 0.4;
-    border: none;
-    color: white;
-    display: inline-block;
-    height: 55px;
-    width: 55px;
-    right: 90px;
-    top: 360px;
-    border-radius: 100px;
-    cursor: pointer;
- }
-
- .buttonright:hover {
-  background-color: white;
-  opacity: 0.6;
-  filter: drop-shadow(0px 2px 16px #ffffff);/*left-right, up-down, blur*/
-}
-
-.buttonleft{
   position: absolute;
   background-color: #ffffff;
   opacity: 0.4;
@@ -95,10 +74,31 @@ h3{
   display: inline-block;
   height: 55px;
   width: 55px;
-  left: 90px;
+  right: 90px;
   top: 360px;
   border-radius: 100px;
   cursor: pointer;
+}
+
+.buttonright:hover {
+background-color: white;
+opacity: 0.6;
+filter: drop-shadow(0px 2px 16px #ffffff);/*left-right, up-down, blur*/
+}
+
+.buttonleft{
+position: absolute;
+background-color: #ffffff;
+opacity: 0.4;
+border: none;
+color: white;
+display: inline-block;
+height: 55px;
+width: 55px;
+left: 90px;
+top: 360px;
+border-radius: 100px;
+cursor: pointer;
 }
 
 .buttonleft:hover {
@@ -109,128 +109,168 @@ filter: drop-shadow(0px 2px 16px #ffffff);/*left-right, up-down, blur*/
 
 /*grid*/
 .wrapper {
-  justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 140px;/*width of the row*/
-  padding-left: 120px;
-  padding-right: 120px;
+justify-content: center;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: 140px;/*width of the row*/
+padding-left: 120px;
+padding-right: 120px;
 }
 
+.rect{
+grid-column-start: 1;
+grid-row-start: 3;
+grid-row-end: 5;
+background-color: #ffffff;
+z-index: -4;
+border-radius: 10%;
+opacity: 0.15;
+margin-top: 80px;
+margin-left: 20px;
+margin-left: 20px;
+height: 250px;
+}
+
+
+.rect2{
+  background-color: #ffffff;
+  z-index: -4;
+  border-radius: 10%;
+  opacity: 0.15;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-left: 20px;
+  height: 200px;
+}
+
+
+
+.rect3{
+    background-color: #ffffff;
+    z-index: -4;
+    border-radius: 10%;
+    opacity: 0.15;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-left: 20px;
+    height: 200px;
+}
+
+
 .g1 {
-  grid-column-start: 1;/*define the start edge of the grid*/
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+grid-column-start: 1;/*define the start edge of the grid*/
+grid-column-end: 4;
+grid-row-start: 1;
+grid-row-end: 3;
 }
 
 .g2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
-  padding-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+grid-column-start: 1;
+grid-row-start: 3;
+grid-row-end: 5;
+padding-top: 100px;
+padding-left: 60px;
+padding-right: 50px;
 }
 
 .g3 {
-  padding-top: 190px;
-  padding-left: 50px;
-  padding-right: 50px;
+padding-top: 190px;
+padding-left: 60px;
+padding-right: 50px;
 }
 
 .g4 {
-  padding-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+padding-top: 100px;
+padding-left: 60px;
+padding-right: 50px;
 }
 
 
 /*planet animation*/
 .earth{
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 20px 20px 80px 20px #00223E inset, 0 0 25px 10px #051a4f;
-    animation: jump 5s ease-in-out infinite;
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 20px 20px 80px 20px #00223E inset, 0 0 25px 10px #051a4f;
+  animation: jump 5s ease-in-out infinite;
 }
-            
+          
 /*let the image inside the circle move paralleled*/
-  .earth > div {
-    width: 200%;
-    height: 100%;
-    box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 25px 20px #006fca;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
-    background: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New-global-view.max-1000x1000.jpeg);
-    background-size: cover;
-    animation: spin 30s linear alternate infinite;
-  }
+.earth > div {
+  width: 200%;
+  height: 100%;
+  box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 25px 20px #006fca;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+  background: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New-global-view.max-1000x1000.jpeg);
+  background-size: cover;
+  animation: spin 30s linear alternate infinite;
+}
 
-  @keyframes spin {
-    to {
-      transform: translateX(-50%);
-    }
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
   }
+}
 
 @keyframes jump {
-    0%, 100% {
-        top: 10px;
-    }
-    50% {
-        top: 15%;
-    }
+  0%, 100% {
+      top: 10px;
+  }
+  50% {
+      top: 15%;
+  }
 }
 
 /*text styling setup*/
 p{
-    font-family: 'Gantari', sans-serif;
-    font-weight: 100;
-    color: #f7f7f7;
-    font-size: 12px;
-    text-align: left;
-  }
-
-
-h2{
-  font-family: "Roboto", sans-serif;
-    color: #006fca;
-    font-weight: 300 ;
-    font-size: 20px;
-    text-align: center;
-}
-
-h4{
-  position: absolute;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Gantari', sans-serif;
   font-weight: 100;
   color: #f7f7f7;
-  font-size: 15px;
-  text-align: center;
-  padding-bottom: 305px;
-}
-
-h5{
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color:#006fca;;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 
-h1{
-  font-family: "Roboto", sans-serif;
-  font-weight: 800;
-  background: -webkit-linear-gradient(#00B4DB, rgb(0, 75, 202));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 80px;
+
+h2{
+font-family: "Roboto", sans-serif;
+  color: #006fca;
+  font-weight: 300 ;
+  font-size: 20px;
   text-align: center;
+}
+
+h4{
+position: absolute;
+font-family: "Roboto", sans-serif;
+font-weight: 100;
+color: #f7f7f7;
+font-size: 15px;
+text-align: center;
+padding-bottom: 305px;
+}
+
+h5{
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+color:#006fca;;
+font-size: 14px;
+text-align: left;
+}
+
+h1{
+font-family: "Roboto", sans-serif;
+font-weight: 800;
+background: -webkit-linear-gradient(#00B4DB, rgb(0, 75, 202));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 80px;
+text-align: center;
 }
 
 
