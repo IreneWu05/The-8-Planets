@@ -1,0 +1,104 @@
+
+
+/*
+.rect-quiz{
+    background-color:#ffffff;
+    border-radius: 10%;
+    opacity: 0.15;
+    height: 700px;
+  }*/
+
+
+  body{  
+    background-color: #00223E; /* appear this color when the browser is not supporting gradient */
+    background-image: linear-gradient(to bottom right, #000000 , #001525);  
+  } 
+  
+
+
+/*home logo/button*/
+.homeicon{
+    position: absolute;
+    font-size: 25px;
+    color: #f7f7f7;
+    left: 90px;
+    top: 55px;
+    
+}
+    
+    h3:hover {
+    color: #006fca;
+    font-weight: 400;
+}
+    
+    h3{
+    font-family: 'Gantari', sans-serif;
+    font-weight: 100;
+    color: #f7f7f7;
+    font-size: 15px;
+    position: absolute;
+    left: 110px;
+    top: 45px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+
+
+/*quiz*/
+input, textarea {
+    border: solid 1px #007de2;
+    border-radius: 3px;
+    color: #007de2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    height: 2em;
+    padding: 1em 1em;/*box size up-down, left*/
+}
+
+  textarea {
+    height: auto;
+    width: 100%;
+  }
+  
+
+  
+  #questions {
+    margin: auto;
+    max-width: 500px;
+    padding: 1em 2.5em;
+  }
+  
+  #questions input,
+  #questions textarea {
+    box-sizing: border-box;
+    min-height: 3em;/*box height*/
+    
+  }
+
+ 
+  .radio-box{
+    font-family: 'Roboro', sans-serif; 
+    color: #f7f7f7;
+    font-size: 0.8em;
+    font-weight: 100;
+  }
+
+/*text style*/
+  h2{
+    font-family: "Roboto", sans-serif;
+      color: #007de2;
+      font-weight: 600 ;
+      font-size: 20px;
+      text-align: center;
+      padding-top:50px;
+    }
+
+  h5{
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color:#007de2;
+    font-size: 14px;
+    }
+
+      
