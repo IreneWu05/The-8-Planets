@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Eight Planets</title>
+    <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css"  href="quiz.css" >
+
+      <!--import google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@100&family=Roboto:wght@100;300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+      
+      <!--import icon library from flaticon-->
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  
+  
+    </head>
+
+  <body>
+   
+    <div class="rect-quiz"></div>
+    
+    <!--website name-->
+    <a href="index.html" class="home"><h3>The <b>8 Planets</b></h3></a>
+
+    <!--home logo-->
+    <div class="homeicon">
+      <i class="fi fi-ss-world"></i>
+    </div>
+
+    <h2>Let's complete a quiz!</h2>
+
+<!--quiz-->
+<form action="/quiz" method="post">
+<div id="questions">
+
+      <label for="name"><h5>How many planets are there in our solar system?</h5></label>
+      <input type="number" min="0" max="10" name="planetNum" required />
+
+
+    <p>
+      <label for="address"><h5>Which is the closest planet to the sun?</h5></label>
+      <input id="address" name="address" placeholder="Type your answer..." required />
+    </p>
+
+    <label for="venus"><h5>Venus ______________________________________________________</h5></label>
+
+    <div class="radio-box">
+    <div>
+        <input type="radio" id="huey" name="drone" required>
+        <label for="huey">is the hottest planet in the solar system</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="dewey" name="drone" required>
+        <label for="dewey">is the only planet to rotate counter-clockwise</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="louie" name="drone" required>
+        <label for="louie"> was once known to the Romans as Vulcan and Galatea</label>
+      </div>
+
+<!--question 4-->
+      <label for="venus"><h5>What are the planets named after?</h5></label>
+      <div>
+        <input type="radio" id="huey" name="drone" required>
+        <label for="huey">Roman Gods</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="dewey" name="drone" required>
+        <label for="dewey">Greek Gods</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="louie" name="drone" required>
+        <label for="louie">Egyptians</label>
+      </div>
+    
+
+
+      <label for="radio"><h5>Which ONE of the following statements about Jupiter is false?</h5></label>
+      <div>
+        <input type="radio" id="huey" name="drone" required>
+        <label for="huey">Jupiter has more known moons than any other planet</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="dewey" name="drone" required>
+        <label for="dewey">Jupiter is more massive than all the planets put together</label>
+      </div>
+  
+      <div>
+        <input type="radio" id="louie" name="drone" required>
+        <label for="louie">Jupiter rotates faster than any other planet</label>
+      </div>
+      </div>
+
+      <!--question 5-->
+  <p>
+    <label for="Mercury"><h5>A day on Mercury is about ______days long?</h5></label>
+    <input id="Mercury" name="Mercury" placeholder="Type your answer..." required />
+  </p>
+
+      <input type="submit" value="submit" class="btn" />
+      </div><!--end of radio box-->
+
+ 
+  </div>
+
+</form>
+
+
+
+
+  </body>
+
+</html>
