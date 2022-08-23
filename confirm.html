@@ -1,0 +1,85 @@
+{% extends "quiz.html" %}
+
+{% block title %}Confirm quiz{% endblock %}
+
+
+{% block head %}
+<style>
+p{
+  color: #f7f7f7;
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="center-text">
+
+  <div>
+    <h2>Your answer</h2>
+    {% for key in details %}
+    <p><strong>{{ key }}:</strong><br />{{ details[key] }}</p>
+    {% endfor %}
+  </div>
+
+  <div>
+    <h5>How many planets are there in our solar system?</h5>
+    {% for key in details %}
+    <p><strong>{{ key }}:</strong><br />{{ details[key] }}</p>
+    {% endfor %}
+  </div>
+
+  <div>
+    <h5>Which is the closest planet to the sun?</h5>
+    {% for key in details %}
+    <p><strong>{{ key }}:</strong><br />{{ details[key] }}</p>
+    {% endfor %}
+  </div>
+
+  <div>
+    <h5>Who discovered the planet Uranus?</h5>
+    {% for item in items %}
+    {{ items[item] }} &times; {{ item }}<br />
+    {% endfor %}
+  </div>
+
+  <div>
+    Venus ______________________________________________________</h5>
+    {% for item in items %}
+    {{ items[item] }} &times; {{ item }}<br />
+    {% endfor %}
+  </div>
+
+  <div>
+    <h5>What are the planets named after?</h5>
+    {% for item in items %}
+    {{ items[item] }} &times; {{ item }}<br />
+    {% endfor %}
+  </div>
+
+  <div>
+    <h5>A day on Mercury is about ______days long?</h5>
+    {% for item in items %}
+    {{ items[item] }} &times; {{ item }}<br />
+    {% endfor %}
+  </div>
+
+  <div>
+    <h5>How many moons does Saturn have in total?</h5>
+    {% for item in items %}
+    {{ items[item] }} &times; {{ item }}<br />
+    {% endfor %}
+  </div>
+
+
+  <p>&nbsp;</p>
+  <p>
+    <em>The correct answer is on the right side.</em>
+  </p>
+  <p>
+    <a class="btn-yellow" href="/">Go back to home page</a>
+  </p>
+
+</div>
+
+{% endblock %}
