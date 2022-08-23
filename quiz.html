@@ -19,10 +19,9 @@
       <!--import icon library from flaticon-->
       <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-  
- 
     </head>
 
+  
   <body>
    
     <div class="rect-quiz"></div>
@@ -35,20 +34,21 @@
       <i class="fi fi-ss-world"></i>
     </div>
 
-{% block content %}
+    {% block content %}
     <h2>Let's complete a quiz!</h2>
 
 <!--quiz-->
 <form action="/confirm" method="post">
 <div id="questions">
 
+    <p>
       <label for="planet"><h5>How many planets are there in our solar system?</h5></label>
-      <input type="number" min="0" max="10" id="planet" name="planet" required />
-
+      <input type="number" min="0" max="10" id="planet" name="planet" required /><br>
+    </p>
 
     <p>
       <label for="mercury"><h5>Which is the closest planet to the sun?</h5></label>
-      <input id="mercury" name="mercury" placeholder="Enter your answer..." required />
+      <input id="mercury" name="mercury" placeholder="Enter your answer..." required /><br>
     </p>
 
     <p>
@@ -56,75 +56,74 @@
       <input id="uranus" name="uranus" placeholder="Enter your answer..." required />
     </p>
 
-    <label for="venus"><h5>Venus ______________________________________________________</h5></label>
+    <h5>Venus ______________________________________________________</h5>
 
-    <div class="radio-box">
+  <div class="radio-box">
     <div>
         <input type="radio" id="venus" name="venus" >
         <label for="venus">is the hottest planet in the solar system</label>
       </div>
   
       <div>
-        <input type="radio" id="venus2" name="venus2" >
-        <label for="venus2">is the only planet to rotate counter-clockwise</label>
+        <input type="radio" id="venus" name="venus" >
+        <label for="venus">is the only planet to rotate counter-clockwise</label>
       </div>
   
       <div>
-        <input type="radio" id="venus3" name="venus4" >
-        <label for="venus3"> was once known to the Romans as Vulcan and Galatea</label>
+        <input type="radio" id="venus" name="venus" >
+        <label for="venus"> was once known to the Romans as Vulcan and Galatea</label>
       </div>
 
-<!--question 4-->
-      <label for="name"><h5>What are the planets named after?</h5></label>
+      <!--question 4-->
+      <h5>What are the planets named after?</h5>
       <div>
         <input type="radio" id="Roman Gods" name="name" required>
         <label for="Roman Gods">Roman Gods</label>
       </div>
   
       <div>
-        <input type="radio" id="Greek gods" name="name2" required>
+        <input type="radio" id="Greek gods" name="name" required>
         <label for="Greek gods">Greek Gods</label>
       </div>
   
       <div>
-        <input type="radio" id="Egyptians" name="name3" required>
+        <input type="radio" id="Egyptians" name="name" required>
         <label for="Egyptians">Egyptians</label>
       </div>
     
 
 
-      <label for="radio"><h5>Which ONE of the following statements about Jupiter is false?</h5></label>
+      <h5>Which ONE of the following statements about Jupiter is false?</h5>
       <div>
         <input type="radio" id="jupiter" name="jupiter" required>
         <label for="jupiter">Jupiter has more known moons than any other planet</label>
       </div>
   
       <div>
-        <input type="radio" id="jupiter2" name="jupiter2" required>
-        <label for="jupiter2">Jupiter is more massive than all the planets put together</label>
+        <input type="radio" id="jupiter" name="jupiter" required>
+        <label for="jupiter">Jupiter is more massive than all the planets put together</label>
       </div>
   
       <div>
-        <input type="radio" id="jupiter3" name="jupiter3" required>
-        <label for="jupiter3">Jupiter rotates faster than any other planet</label>
+        <input type="radio" id="jupiter" name="jupiter" required>
+        <label for="jupiter">Jupiter rotates faster than any other planet</label>
       </div>
       </div>
 
       <!--question 5-->
-  <p>
-    <label for="Mercury"><h5>A day on Mercury is about ______days long?</h5></label>
-    <input id="Mercury" name="Mercury" placeholder="Enter your answer..." required />
-  </p>
+    <p>
+      <label for="Mercury"><h5>A day on Mercury is about ______days long?</h5></label>
+      <input id="Mercury" name="Mercury" placeholder="Enter your answer..." required />
+    </p>
 
   <label for="Saturn"><h5>How many moons does Saturn have in total?</h5></label>
   <input type="number" min="0" max="100" name="planetNum" id="Saturn" required />
 
 
-      <input type="submit" value="submit quiz" class="btn" href="confirm.html" />
-      </div><!--end of radio box-->
-
+  <input type="submit" value="submit quiz" class="btn" href="confirm.html" />
+</div><!--end of radio box-->
  
-  </div><!--end of questions-->
+</div><!--end of questions-->
 
 </form>
 {% endblock %}
