@@ -9,7 +9,7 @@
     <title>The Eight Planets</title>
     <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css"  href="quiz.css" >
+    <link rel="stylesheet"  href="{{ url_for('static', filename='quiz.css') }}" >
 
       <!--import google fonts-->
       <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -20,7 +20,7 @@
       <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   
-  
+ 
     </head>
 
   <body>
@@ -35,58 +35,59 @@
       <i class="fi fi-ss-world"></i>
     </div>
 
+{% block content %}
     <h2>Let's complete a quiz!</h2>
 
 <!--quiz-->
-<form action="/quiz" method="post">
+<form action="/confirm" method="post">
 <div id="questions">
 
       <label for="planet"><h5>How many planets are there in our solar system?</h5></label>
-      <input type="number" min="0" max="10" name="planetNum" required />
+      <input type="number" min="0" max="10" id="planet" name="planet" required />
 
 
     <p>
       <label for="mercury"><h5>Which is the closest planet to the sun?</h5></label>
-      <input id="mercury" name="mercury" placeholder="Type your answer..." required />
+      <input id="mercury" name="mercury" placeholder="Enter your answer..." required />
     </p>
 
     <p>
       <label for="uranus"><h5>Who discovered the planet Uranus?</h5></label>
-      <input id="uranus" name="uranus" placeholder="Type your answer..." required />
+      <input id="uranus" name="uranus" placeholder="Enter your answer..." required />
     </p>
 
     <label for="venus"><h5>Venus ______________________________________________________</h5></label>
 
     <div class="radio-box">
     <div>
-        <input type="radio" id="venus" name="venus" required>
+        <input type="radio" id="venus" name="venus" >
         <label for="venus">is the hottest planet in the solar system</label>
       </div>
   
       <div>
-        <input type="radio" id="venus2" name="venus2" required>
+        <input type="radio" id="venus2" name="venus2" >
         <label for="venus2">is the only planet to rotate counter-clockwise</label>
       </div>
   
       <div>
-        <input type="radio" id="venus3" name="venus4" required>
+        <input type="radio" id="venus3" name="venus4" >
         <label for="venus3"> was once known to the Romans as Vulcan and Galatea</label>
       </div>
 
 <!--question 4-->
       <label for="name"><h5>What are the planets named after?</h5></label>
       <div>
-        <input type="radio" id="name" name="name" required>
+        <input type="radio" id="Roman Gods" name="name" required>
         <label for="Roman Gods">Roman Gods</label>
       </div>
   
       <div>
-        <input type="radio" id="name2" name="name2" required>
+        <input type="radio" id="Greek gods" name="name2" required>
         <label for="Greek gods">Greek Gods</label>
       </div>
   
       <div>
-        <input type="radio" id="name3" name="name3" required>
+        <input type="radio" id="Egyptians" name="name3" required>
         <label for="Egyptians">Egyptians</label>
       </div>
     
@@ -112,21 +113,21 @@
       <!--question 5-->
   <p>
     <label for="Mercury"><h5>A day on Mercury is about ______days long?</h5></label>
-    <input id="Mercury" name="Mercury" placeholder="Type your answer..." required />
+    <input id="Mercury" name="Mercury" placeholder="Enter your answer..." required />
   </p>
 
-  <label for="planet"><h5>How many moons does Saturn have in total?</h5></label>
-  <input type="number" min="0" max="100" name="planetNum" required />
+  <label for="Saturn"><h5>How many moons does Saturn have in total?</h5></label>
+  <input type="number" min="0" max="100" name="planetNum" id="Saturn" required />
 
 
-      <input type="submit" value="submit quiz" class="btn" />
+      <input type="submit" value="submit quiz" class="btn" href="confirm.html" />
       </div><!--end of radio box-->
 
  
-  </div>
+  </div><!--end of questions-->
 
 </form>
-
+{% endblock %}
 
 
 
