@@ -11,13 +11,10 @@ def index():
 @app.route('/confirm', methods=['POST'])
 def confirm():
    details = {}
-   items = {}
    
  
    for input in request.form:
-       if input == 'planet' or input == 'mercury':
+       if input == 'planet' or input == 'mercury' or input == 'venus' or input == 'name' or input == 'Mercury' or input == 'Saturn':
            details[input] = request.form[input]
-       elif request.form[input] and request.form[input] != '0':
-           items[input] = request.form[input]
    print(details)
-   return render_template('confirm.html', details=details, items=items)
+   return render_template('confirm.html', details=details)
