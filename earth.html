@@ -51,38 +51,55 @@
         <a href="https://solarsystem.nasa.gov/planets/earth/overview/"><p>Learn more ⌲</p></a>
       </div>
      
+      
         <div class="g3">
           <h2>Basic Statistics </h2>
-
+          
+          
           <table>
-            <h5>Discovered Year</h5>
+            <h5>Length of Year on Earth</h5>
+
             {% for col in items %}
             <tr>
-              <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+              <td><p class="p1">{{ col['rotatetime'] }}</p></td>
             </tr>
             {% endfor %}
             </table>
 
-            <table>
-              <h5>Length of Year</h5>
-              {% for col in items %}
-              <tr>
-                <td><p class="p1">{{ col['rotatetime'] }}</p></td>
-              </tr>
-              {% endfor %}
-              </table>
+            
+            <div class="gap">
+              <table>
+                <h5>Length of Day on Earth</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['daylength'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+            
+              
+              <table>
+                <h5>Discovered Year</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+
+      
+                <table>
+                  <h5>Distance From the Sun (km)</h5>
+                  {% for col in items %}
+                  <tr>
+                    <td><p class="p1">{{ col['distance'] }}</p></td>
+                  </tr>
+                  {% endfor %}
+                  </table>
+      
 
           <table>
-          <h5>Distance From Sun(km)</h5>
-          {% for col in items %}
-          <tr>
-            <td><p class="p1">{{ col['distance'] }}</p></td>
-          </tr>
-          {% endfor %}
-          </table>
-
-          <table>
-          <h5>Diamter(km)</h5>
+          <h5>Diameter (km)</h5>
           {% for col in items %}
           <tr>
             <td><p class="p1">{{ col['diameter'] }}</p></td>
@@ -90,15 +107,12 @@
           {% endfor %}
           </table>
 
-          <table>
-            <h5>Length of Day</h5>
-            {% for col in items %}
-            <tr>
-              <td><p class="p1">{{ col['daylength'] }}</p></td>
-            </tr>
-            {% endfor %}
-            </table>
-        </div>
+          
+         
+        </div><!--end of gap-->
+        </div><!--end of g3-->
+      
+        
 
         <div class="g4">
           <h2>Facts</h2>
@@ -111,11 +125,14 @@
           </ul>
         </div>
 
+
         <div class="rect"></div>
         <div class="rect2"></div>
         <div class="rect3"></div>
 
     </div>
+
+
 
     <!--home logo-->
     <div class="homeicon">
