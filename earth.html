@@ -1,3 +1,4 @@
+{% block title %}The Eight Planets - Earth{% endblock %}
 
 <!DOCTYPE html>
 
@@ -9,7 +10,7 @@
     <title>The Eight Planets</title>
     <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css"  href="pages.css" >
+    <link rel="stylesheet"  href="{{ url_for('static', filename='pages.css') }}" >
 
       <!--import google fonts-->
       <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -22,7 +23,7 @@
   
   
     </head>
-
+    {% block content %}
   <body>
    
     <section> 
@@ -52,9 +53,29 @@
      
         <div class="g3">
           <h2>Basic Statistics </h2>
+
+          <h5>Discovered year</h5>
+
           <h5>Length of Year</h5>
+
+          <table>
           <h5>Distance From Sun</h5>
+          {% for col in items %}
+          <tr>
+            <td><p class="p1">{{ col['distance'] }}</p></td>
+          </tr>
+          {% endfor %}
+          </table>
+
+          <table>
           <h5>Diamter(km)</h5>
+          {% for col in items %}
+          <tr>
+            <td><p class="p1">{{ col['diameter'] }}</p></td>
+          </tr>
+          {% endfor %}
+          </table>
+
           <h5>Time to rotate</h5>
         </div>
 
@@ -96,3 +117,5 @@
   </body>
 
 </html>
+
+{% endblock %}
