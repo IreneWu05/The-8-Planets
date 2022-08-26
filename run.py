@@ -9,9 +9,10 @@ import sqlite3
 @app.route('/earth')
 def earth():
     con = sqlite3.connect('planetdata.db')
+    con.row_factory = sqlite3.Row
     db = con.cursor()
-    res = db.execute("SELECT distance from planet WHERE id = 1")
-    return render_template('earth.html', distances=res.fetchall())
+    res = db.execute("SELECT distance, diameter from planet WHERE id = 1")
+    return render_template('earth.html', items=res.fetchall())
 
 
 
