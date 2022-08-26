@@ -3,26 +3,25 @@ app = Flask(__name__)
 
 #import database for the planets
 import sqlite3
-conn = sqlite3.connect('planetdata.db')
+
 
 #execute specific data
-cursor = conn.execute("SELECT distance from planet WHERE id = 1")
-for row in cursor:
-    print("earth distance = ", row[0])
+@app.route('/earth')
 def earth():
-    return render_template('earth.html')
-conn.close()
+    con = sqlite3.connect('planetdata.db')
+    db = con.cursor()
+    res = db.execute("SELECT distance from planet WHERE id = 1")
+    return render_template('earth.html', distances=res.fetchall())
+
+
 
 
 
 @app.route('/')
-def index():
+def quiz():
     return render_template('quiz.html')
 
 
-@app.route('/earth')
-def earth():
-    return render_template('earth.html')
 
 
 
