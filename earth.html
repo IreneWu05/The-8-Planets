@@ -54,12 +54,26 @@
         <div class="g3">
           <h2>Basic Statistics </h2>
 
-          <h5>Discovered year</h5>
+          <table>
+            <h5>Discovered Year</h5>
+            {% for col in items %}
+            <tr>
+              <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+            </tr>
+            {% endfor %}
+            </table>
 
-          <h5>Length of Year</h5>
+            <table>
+              <h5>Length of Year</h5>
+              {% for col in items %}
+              <tr>
+                <td><p class="p1">{{ col['rotatetime'] }}</p></td>
+              </tr>
+              {% endfor %}
+              </table>
 
           <table>
-          <h5>Distance From Sun</h5>
+          <h5>Distance From Sun(km)</h5>
           {% for col in items %}
           <tr>
             <td><p class="p1">{{ col['distance'] }}</p></td>
@@ -76,7 +90,14 @@
           {% endfor %}
           </table>
 
-          <h5>Time to rotate</h5>
+          <table>
+            <h5>Length of Day</h5>
+            {% for col in items %}
+            <tr>
+              <td><p class="p1">{{ col['daylength'] }}</p></td>
+            </tr>
+            {% endfor %}
+            </table>
         </div>
 
         <div class="g4">
