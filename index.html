@@ -9,47 +9,58 @@
     <title>The Eight Planets</title>
     <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"  type="text/css"  href="style.css" >
+    <link rel="stylesheet"  href="{{ url_for('static', filename='style.css') }}" >
+
+     <!--import google font-->
+     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet"></head>
 
   </head>
 
+
+  
   <body>
     <div id="gradient_background"></div>
+
+    <h4>Welcome to The 8 Planets</h4>
+    <h4>Let's check out the planets in our solar system</h4>
     
     <!--set up for the 8 planets-->
     <section> 
       <div class="earth">
-        <div> <a href="earth.html"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New-global-view.max-1000x1000.jpeg" alt="HTML tutorial"></a></div>
+        <div> <a href="{{ url_for('earth') }}"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New-global-view.max-1000x1000.jpeg" style=" width: 250px;" alt="earth"></a></div>
          </div>
 
       <div class="mars">
-        <div></div>
+        <div><a href="{{ url_for('mars') }}"><img src="https://media.istockphoto.com/videos/the-travel-of-the-camera-on-the-surface-of-the-mars-in-high-qualityon-video-id1147065154?s=640x640" style=" width: 154px;" alt="mars"></a></div>
       </div>
 
       <div class="jupiter">
-        <div></div>
+        <div><a href="{{ url_for('jupiter') }}"><img src="https://planetary.s3.amazonaws.com/web/assets/pictures/_2400x1200_crop_center-center_82_line/20180511_jupiter_map_css_plus_juno_bj.jpg.webp" style=" width: 500px; " alt="jupiter"></a></div>
       </div>
 
       <div class="saturn">
-        <div></div>
+        <div><a href="{{ url_for('saturn') }}"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e0763947-6f42-4d09-944f-c2d6f41c415b/dcaift0-422ad564-f7b0-4291-914f-425b9ac29a35.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UwNzYzOTQ3LTZmNDItNGQwOS05NDRmLWMyZDZmNDFjNDE1YlwvZGNhaWZ0MC00MjJhZDU2NC1mN2IwLTQyOTEtOTE0Zi00MjViOWFjMjlhMzUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YYTxK1xSwJxGTBIMLHsgFWiwrdd0W6UqmXy7a5CCnnk" style=" width: 310px; " alt="saturn"></a></div>
       </div>
 
       <div class="uranus">
-        <div></div>
+        <div><a href="{{ url_for('uranus') }}"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1912b050-3675-4394-a3d1-d0b4cb43ae0a/dc18wwb-e195cd81-efbd-480a-9f51-5100a530683d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5MTJiMDUwLTM2NzUtNDM5NC1hM2QxLWQwYjRjYjQzYWUwYVwvZGMxOHd3Yi1lMTk1Y2Q4MS1lZmJkLTQ4MGEtOWY1MS01MTAwYTUzMDY4M2QuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SL33h8GpzTu_M-WWzxQjyw0osVvDZ-NlEKmLkRLzZA8" style=" width: 310px;" alt="uranus"></a></div>
       </div>
 
       <div class="neptune">
-        <div></div>
+        <div><a href="{{ url_for('neptune') }}"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e0763947-6f42-4d09-944f-c2d6f41c415b/dcaifld-8408b286-dfb4-4b94-9d36-029c36cc636f.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UwNzYzOTQ3LTZmNDItNGQwOS05NDRmLWMyZDZmNDFjNDE1YlwvZGNhaWZsZC04NDA4YjI4Ni1kZmI0LTRiOTQtOWQzNi0wMjljMzZjYzYzNmYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yODnyxRY22JiaqPEBgn28JKMhuisNqchBcC3QQSJO24" style=" width: 360px;" alt="neptune"></a></div>
       </div>
       
       <div class="mercury">
-        <div></div>
+        <div><a href="{{ url_for('mercury') }}"><img src="https://live.staticflickr.com/4872/32479340708_b5093f2fcb_b.jpg" style=" width: 130px;" alt="mercury"></a></div>
       </div>
 
       <div class="venus">
-        <div></div>
+        <div><a href="{{ url_for('venus') }}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Cylindrical_Map_of_Venus.jpg/1600px-Cylindrical_Map_of_Venus.jpg?20150824100848" style=" width: 260px; " alt="venus"></a></div>
       </div>
-    </section>    
+    </section>  
+  
 
   </body>
 
