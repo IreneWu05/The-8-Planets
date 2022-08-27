@@ -1,8 +1,7 @@
 
 body{  
     background-color: #00223E; /* appear this color when the browser is not supporting gradient */
-    background-image: linear-gradient(to bottom right, #000000 , #00223E); 
-      
+    background-image: linear-gradient(to bottom right, #000000 , #001525); 
     height: 100%;  
     margin: 0;  
     padding:0;
@@ -10,8 +9,18 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    perspective: 1200px;/*viewpoint*/
+    perspective: 500px;/*viewpoint*/
 } 
+
+h4{
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    color: #f7f7f7;
+    font-size: 15px;
+   text-align: center;
+    top: 130px;
+}
 
 /* planets*/
 /*/////earth/////*/
@@ -30,13 +39,13 @@ body{
     box-shadow: 20px 20px 80px 20px #00223E inset, 0 0 25px 10px #051a4f;
     animation: jump 5s ease-in-out infinite;
 }
+
             
 /*let the image inside the circle move paralleled*/
   .earth > div {
     width: 200%;
     height: 100%;
     box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 25px 20px #006fca;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
-    background: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/New-global-view.max-1000x1000.jpeg);
     background-size: cover;
     animation: spin 30s linear alternate infinite;
   }
@@ -79,7 +88,6 @@ body{
     width: 200%;
     height: 100%;
     box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 50px 10px #7c5618;
-    background: url(https://www.cloudynights.com/uploads/monthly_09_2020/post-227238-0-85091500-1599858965.jpg);
     background-size: cover;
     animation: spin 30s linear alternate infinite;
   }
@@ -113,7 +121,7 @@ body{
     margin: auto;
     overflow: hidden;
     border-radius: 50%;
-    box-shadow: 0 0 80px 20px #00223E inset, 0 0 100px 40px #4f2f05;
+    box-shadow: 0 0 60px 20px #00223E inset, 0 0 100px 40px #4f2f05;
     animation: jump 5s ease-in-out infinite;
 }
             
@@ -121,10 +129,9 @@ body{
   .jupiter > div {
     width: 200%;
     height: 100%;
-    box-shadow: 0 0 100px 50px black  inset, 10px 10px 80px 90px #a18d5a;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
-    background: url(https://ih0.redbubble.net/image.247200544.9421/flat,800x800,075,f.jpg);
+    box-shadow: 0 0 60px 50px black  inset, 10px 10px 80px 90px #a18d5a;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
     background-size: cover;
-    animation: spin 30s linear alternate infinite;
+    animation: spin 10s linear alternate infinite;
   }
 
 
@@ -165,9 +172,8 @@ body{
     width: 200%;
     height: 100%;
     box-shadow: 0 0 70px 40px black  inset, 10px 10px 80px 90px #908568;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
-    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e0763947-6f42-4d09-944f-c2d6f41c415b/dcaift0-422ad564-f7b0-4291-914f-425b9ac29a35.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UwNzYzOTQ3LTZmNDItNGQwOS05NDRmLWMyZDZmNDFjNDE1YlwvZGNhaWZ0MC00MjJhZDU2NC1mN2IwLTQyOTEtOTE0Zi00MjViOWFjMjlhMzUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YYTxK1xSwJxGTBIMLHsgFWiwrdd0W6UqmXy7a5CCnnk);
     background-size: cover;
-    animation: spin 30s linear alternate infinite;
+    animation: spin 10s linear alternate infinite;
   }
 
 
@@ -184,6 +190,159 @@ body{
     50% {
         top: 20%;
 }
+}
+
+
+
+/*uranus */
+.uranus{
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 10px #00223E inset, 0 0 45px 10px #144652;
+  animation: jump 2s ease-in-out infinite;
+}
+        
+/*let the image inside the circle move paralleled*/
+.uranus > div {
+  width: 200%;
+  height: 100%;
+  box-shadow: 0 0 40px 40px black  inset, 10px 10px 80px 90px #688690;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+  background-size: cover;
+  animation: spin 20s linear alternate infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+      top: 10px;
+  }
+  50% {
+      top: 20%;
+}
+}
+
+
+
+/* neptune*/
+/* */
+.neptune{
+  width: 180px;
+  height: 180px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 10px #00223E inset, 0 0 80px 20px #3d465c;
+  animation: jump 4s ease-in-out infinite;
+}
+        
+/*let the image inside the circle move paralleled*/
+.neptune > div {
+  width: 200%;
+  height: 100%;
+  box-shadow: 0 0 50px 40px #000000 inset, 10px 10px 25px 20px #006fca;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+  background-size: cover;
+  animation: spin 10s linear alternate infinite;
+}
+
+
+.mercury{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px #835800 inset, 0 0 25px 10px #4a3300;
+  animation: jump 5s ease-in-out infinite;
+}
+          
+/*let the image inside the circle move paralleled*/
+.mercury > div {
+  width: 200%;
+  height: 100%;
+  box-shadow: 0 0 10px 10px #000000 inset, 10px 10px 25px 20px #644f1e;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+  background-size: cover;
+  animation: spin 10s linear alternate infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+      top: 10px;
+  }
+  50% {
+      top: 20%;
+  }
+}
+
+
+.venus{
+  width: 130px;
+  height: 130px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 0 50px 30px #835800 inset, 0 0 60px 10px #4a3300;
+  border-radius: 50%;
+  animation: jump 3s ease-in-out infinite;
+}
+          
+/*let the image inside the circle move paralleled*/
+.venus > div {
+  width: 200%;
+  height: 100%;
+  box-shadow: 0 0 20px 20px #000000 inset, 10px 10px 25px 20px #643c1e;/* inner shadow, outer shadow, (x,y,blur,blur range)*/
+  background-size: cover;
+  animation: spin 10s linear alternate infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+      top: 10px;
+  }
+  50% {
+      top: 20%;
+  }
 }
 
 
@@ -213,9 +372,9 @@ section div {
     height: 100;
 
    /*make a drop reflection for each image, 
-   it'll be placed 30px below the main image*/
-    -webkit-box-reflect: below 60px 
-    -webkit-linear-gradient(transparent 10%, rgba(255, 255, 255, 0.3));
+   it'll be placed 90px below the main image*/
+    -webkit-box-reflect: below 90px 
+    -webkit-linear-gradient(transparent 50%, rgba(255, 255, 255, 0.3));/*set reflection opacity*/
 }
 
 
