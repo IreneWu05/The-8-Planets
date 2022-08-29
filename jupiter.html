@@ -1,0 +1,161 @@
+{% block title %}The Eight Planets - Jupiter{% endblock %}
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Eight Planets - Jupiter</title>
+    <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='pages.css') }}" >
+
+      <!--import google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@100&family=Roboto:wght@100;300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+      
+      <!--import icon library from flaticon-->
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  
+  
+    </head>
+    {% block content %}
+
+  <body>
+   
+    <section> 
+      <!--earth animation-->
+        <div class="jupiter">
+            <div></div>
+        </div>
+    </section>  
+    
+    <!--website name-->
+    <a href="{{ url_for('index') }}" class="home"><h3>The <b>8 Planets</b></h3></a>
+       
+    <!--grid-->
+    <div class="wrapper">
+      <div class="g1">
+        <h1 style="background: -webkit-linear-gradient(#9d7324, #78abbc);
+                   -webkit-background-clip: text;
+                   -webkit-text-fill-color: transparent;">Jupiter</h1>
+      </div>
+      
+      <div class="g2">
+        <h2 style="color:#78abbc"> About Jupiter</h2>
+        <p>Fifth in line from the Sun, Jupiter is, by far, the largest planet in the solar system – more than twice as massive as all the other planets combined.</p>
+        <p>Jupiter's familiar stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.
+        One spacecraft – NASA's Juno orbiter – is currently exploring this giant world.
+        </p>
+        <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/"><p>Learn more ⌲</p></a>
+      </div>
+     
+      
+        <div class="g3">
+          <h2 style="color:#78abbc">Basic Statistics </h2>
+          
+          
+          <table>
+            <h5 style="color:#78abbc">Length of Year on Jupiter</h5>
+
+            {% for col in items %}
+            <tr>
+              <td><p class="p1">{{ col['rotatetime'] }}</p></td>
+            </tr>
+            {% endfor %}
+            </table>
+
+            
+            <div class="gap">
+              <table>
+                <h5 style="color:#78abbc">Length of Day on Jupiter</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['daylength'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+            
+              
+              <table>
+                <h5 style="color:#78abbc">Discovered Year</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+
+      
+                <table>
+                  <h5 style="color:#78abbc">Distance From Sun (km)</h5>
+                  {% for col in items %}
+                  <tr>
+                    <td><p class="p1">{{ col['distance'] }}</p></td>
+                  </tr>
+                  {% endfor %}
+                  </table>
+      
+
+          <table>
+          <h5 style="color:#78abbc">Diameter (km)</h5>
+          {% for col in items %}
+          <tr>
+            <td><p class="p1">{{ col['diameter'] }}</p></td>
+          </tr>
+          {% endfor %}
+          </table>
+
+          
+         
+        </div><!--end of gap-->
+        </div><!--end of g3-->
+      
+        
+
+        <div class="g4">
+          <h2 style="color:#78abbc">Facts</h2>
+          <ul class="bulletpoint">
+           <li><p>Eleven Earths could fit across Jupiter’s equator. If Earth were the size of a grape, Jupiter would be the size of a basketball.</p></li>
+           <li><p>Jupiter rotates once about every 10 hours (a Jovian day), but takes about 12 Earth years to complete one orbit of the Sun (a Jovian year).</p></li>
+           <li><p>Jupiter is a gas giant and so lacks an Earth-like surface. If it has a solid inner core at all, it’s likely only about the size of Earth.</p></li>
+           <li><p>Jupiter has more than 75 moons.</p></li>
+          </ul>
+        </div>
+
+
+        <div class="rect"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+
+    </div>
+
+
+
+    <!--home logo-->
+    <div class="homeicon">
+      <i class="fi fi-ss-world"></i>
+    </div>
+
+    <!--buttons-->
+    <div class="iconright">
+      <i class="fi fi-ss-angle-right"></i>
+    </div>
+    <a href="{{ url_for('saturn') }}" class="buttonright"></a>
+
+    <div class="iconleft">
+      <i class="fi fi-ss-angle-left"></i>
+    </div>
+    <a href="{{ url_for('mars') }}" class="buttonleft"></a>
+
+<h4>H i n e - i - t ī w e k a</h4>
+
+  </body>
+
+</html>
+
+{% endblock %}
