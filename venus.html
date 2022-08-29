@@ -1,0 +1,162 @@
+{% block title %}The Eight Planets - Venus{% endblock %}
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Eight Planets - Venus</title>
+    <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='pages.css') }}" >
+
+      <!--import google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@100&family=Roboto:wght@100;300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+      
+      <!--import icon library from flaticon-->
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  
+  
+    </head>
+    {% block content %}
+
+  <body>
+   
+    <section> 
+      <!--earth animation-->
+        <div class="venus">
+            <div></div>
+        </div>
+    </section>  
+    
+    <!--website name-->
+    <a href="{{ url_for('index') }}" class="home"><h3>The <b>8 Planets</b></h3></a>
+       
+    <!--grid-->
+    <div class="wrapper">
+      <div class="g1">
+        <h1 style="background: -webkit-linear-gradient(#ffd885, #b76100);
+                   -webkit-background-clip: text;
+                   -webkit-text-fill-color: transparent;">Venus</h1>
+      </div>
+      
+      <div class="g2">
+        <h2 style="color:#d8801b"> About Venus</h2>
+        <p>Venus is the second planet from the Sun and is Earth’s closest planetary neighbor. 
+        </p>
+        <p>It’s the hottest planet in our solar system, even though Mercury is closer to the Sun. Surface temperatures on Venus are about 900 degrees Fahrenheit (475 degrees Celsius) – hot enough to melt lead.
+        </p>
+        <p>Venus has a solid surface covered in dome-like volcanoes, rifts, and mountains, with expansive volcanic plains and vast, ridged plateaus.</p>
+        <a href="https://solarsystem.nasa.gov/planets/venus/overview/"><p>Learn more ⌲</p></a>
+      </div>
+     
+      
+        <div class="g3">
+          <h2 style="color:#d8801b">Basic Statistics </h2>
+          
+          
+          <table>
+            <h5 style="color:#d8801b">Length of Year on Venus</h5>
+
+            {% for col in items %}
+            <tr>
+              <td><p class="p1">{{ col['rotatetime'] }}</p></td>
+            </tr>
+            {% endfor %}
+            </table>
+
+            
+            <div class="gap">
+              <table>
+                <h5 style="color:#d8801b">Length of Day on Venus</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['daylength'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+            
+              
+              <table>
+                <h5 style="color:#d8801b">Discovered Year</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+
+      
+                <table>
+                  <h5 style="color:#d8801b">Distance From Sun (km)</h5>
+                  {% for col in items %}
+                  <tr>
+                    <td><p class="p1">{{ col['distance'] }}</p></td>
+                  </tr>
+                  {% endfor %}
+                  </table>
+      
+
+          <table>
+          <h5 style="color:#d8801b">Diameter (km)</h5>
+          {% for col in items %}
+          <tr>
+            <td><p class="p1">{{ col['diameter'] }}</p></td>
+          </tr>
+          {% endfor %}
+          </table>
+
+          
+         
+        </div><!--end of gap-->
+        </div><!--end of g3-->
+      
+        
+
+        <div class="g4">
+          <h2 style="color:#d8801b">Facts</h2>
+          <ul class="bulletpoint">
+           <li><p>Venus is the second closest planet to the Sun, orbiting at a distance of about 67 million miles (108 million kilometers)</p></li>
+           <li><p>Venus was the first planet explored by a spacecraft and was intensely studied early in the history of space exploration.</p></li>
+           <li><p>The average surface of Venus is less than a billion years old, and possibly as young as 150 million years old.
+          </p></li>
+          </ul>
+        </div>
+
+
+        <div class="rect"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+
+    </div>
+
+
+
+    <!--home logo-->
+    <div class="homeicon">
+      <i class="fi fi-ss-world"></i>
+    </div>
+
+    <!--buttons-->
+    <div class="iconright">
+      <i class="fi fi-ss-angle-right"></i>
+    </div>
+    <a href="{{ url_for('mars') }}" class="buttonright"></a>
+
+    <div class="iconleft">
+      <i class="fi fi-ss-angle-left"></i>
+    </div>
+    <a href="{{ url_for('mercury') }}" class="buttonleft"></a>
+
+<h4>K ō p ū</h4>
+
+  </body>
+
+</html>
+
+{% endblock %}
