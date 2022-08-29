@@ -1,0 +1,159 @@
+{% block title %}The Eight Planets - Neptune{% endblock %}
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Eight Planets - Neptune</title>
+    <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='pages.css') }}" >
+
+      <!--import google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@100&family=Roboto:wght@100;300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+      
+      <!--import icon library from flaticon-->
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  
+  
+    </head>
+    {% block content %}
+
+  <body>
+   
+    <section> 
+      <!--earth animation-->
+        <div class="neptune">
+            <div></div>
+        </div>
+    </section>  
+    
+    <!--website name-->
+    <a href="{{ url_for('index') }}" class="home"><h3>The <b>8 Planets</b></h3></a>
+       
+    <!--grid-->
+    <div class="wrapper">
+      <div class="g1">
+        <h1 style="background: -webkit-linear-gradient(#93c0ff, #2463e3);
+                   -webkit-background-clip: text;
+                   -webkit-text-fill-color: transparent;">Neptune</h1>
+      </div>
+      
+      <div class="g2">
+        <h2 style="color:#4683ff"> About Neptune</h2>
+        <p>Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system.</p>
+        <p>Neptune—More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.</p>
+        <a href="https://solarsystem.nasa.gov/planets/neptune/overview/"><p>Learn more ⌲</p></a>
+      </div>
+     
+      
+        <div class="g3">
+          <h2 style="color:#4683ff">Basic Statistics </h2>
+          
+          
+          <table>
+            <h5 style="color:#4683ff">Length of Year on Neptune</h5>
+
+            {% for col in items %}
+            <tr>
+              <td><p class="p1">{{ col['rotatetime'] }}</p></td>
+            </tr>
+            {% endfor %}
+            </table>
+
+            
+            <div class="gap">
+              <table>
+                <h5 style="color:#4683ff">Length of Day on Neptune</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['daylength'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+            
+              
+              <table>
+                <h5 style="color:#4683ff">Discovered Year</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+
+      
+                <table>
+                  <h5 style="color:#4683ff">Distance From Sun (km)</h5>
+                  {% for col in items %}
+                  <tr>
+                    <td><p class="p1">{{ col['distance'] }}</p></td>
+                  </tr>
+                  {% endfor %}
+                  </table>
+      
+
+          <table>
+          <h5 style="color:#4683ff">Diameter (km)</h5>
+          {% for col in items %}
+          <tr>
+            <td><p class="p1">{{ col['diameter'] }}</p></td>
+          </tr>
+          {% endfor %}
+          </table>
+
+          
+         
+        </div><!--end of gap-->
+        </div><!--end of g3-->
+      
+        
+
+        <div class="g4">
+          <h2 style="color:#4683ff">Facts</h2>
+          <ul class="bulletpoint">
+           <li><p>Neptune is an ice giant. Most of its mass is a hot, dense fluid of "icy" materials – water, methane and ammonia – above a small rocky core.</p></li>
+           <li><p>Neptune is about four times wider than Earth. If Earth were a large apple, Neptune would be the size of a basketball.</p></li>
+           <li><p>Neptune has 14 known moons which are named after sea gods and nymphs in Greek mythology.</p></li>
+           <li><p>Neptune orbits our Sun, a star, and is the eighth planet from the Sun at a distance of about 2.8 billion miles (4.5 billion kilometers).</p></li>
+        </ul>
+        </div>
+
+
+        <div class="rect"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+
+    </div>
+
+
+
+    <!--home logo-->
+    <div class="homeicon">
+      <i class="fi fi-ss-world"></i>
+    </div>
+
+    <!--buttons-->
+    <div class="iconright">
+      <i class="fi fi-ss-angle-right"></i>
+    </div>
+    <a href="{{ url_for('quiz') }}" class="buttonright"></a>
+
+    <div class="iconleft">
+      <i class="fi fi-ss-angle-left"></i>
+    </div>
+    <a href="{{ url_for('uranus') }}" class="buttonleft"></a>
+
+<h4>T a n g a r o a</h4>
+
+  </body>
+
+</html>
+
+{% endblock %}
