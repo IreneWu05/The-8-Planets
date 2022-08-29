@@ -1,0 +1,160 @@
+{% block title %}The Eight Planets - Mercury{% endblock %}
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Eight Planets - Mercury</title>
+    <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='pages.css') }}" >
+
+      <!--import google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@100&family=Roboto:wght@100;300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+      
+      <!--import icon library from flaticon-->
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  
+  
+    </head>
+    {% block content %}
+
+  <body>
+   
+    <section> 
+      <!--earth animation-->
+        <div class="mercury">
+            <div></div>
+        </div>
+    </section>  
+    
+    <!--website name-->
+    <a href="{{ url_for('index') }}" class="home"><h3>The <b>8 Planets</b></h3></a>
+       
+    <!--grid-->
+    <div class="wrapper">
+      <div class="g1">
+        <h1 style="background: -webkit-linear-gradient(#2463e3, #ffcd93);
+                   -webkit-background-clip: text;
+                   -webkit-text-fill-color: transparent;">Mercury</h1>
+      </div>
+      
+      <div class="g2">
+        <h2 style="color:#ffcd93"> About Mercury</h2>
+        <p>The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon.</p>
+        <p>From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks to its dense atmosphere.
+        </p>
+        <a href="https://solarsystem.nasa.gov/planets/mercury/overview/"><p>Learn more ⌲</p></a>
+      </div>
+     
+      
+        <div class="g3">
+          <h2 style="color:#ffcd93">Basic Statistics </h2>
+          
+          
+          <table>
+            <h5 style="color:#ffcd93">Length of Year on Mercury</h5>
+
+            {% for col in items %}
+            <tr>
+              <td><p class="p1">{{ col['rotatetime'] }}</p></td>
+            </tr>
+            {% endfor %}
+            </table>
+
+            
+            <div class="gap">
+              <table>
+                <h5 style="color:#ffcd93">Length of Day on Mercury</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['daylength'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+            
+              
+              <table>
+                <h5 style="color:#ffcd93">Discovered Year</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+
+      
+                <table>
+                  <h5 style="color:#ffcd93">Distance From Sun (km)</h5>
+                  {% for col in items %}
+                  <tr>
+                    <td><p class="p1">{{ col['distance'] }}</p></td>
+                  </tr>
+                  {% endfor %}
+                  </table>
+      
+
+          <table>
+          <h5 style="color:#ffcd93">Diameter (km)</h5>
+          {% for col in items %}
+          <tr>
+            <td><p class="p1">{{ col['diameter'] }}</p></td>
+          </tr>
+          {% endfor %}
+          </table>
+
+          
+         
+        </div><!--end of gap-->
+        </div><!--end of g3-->
+      
+        
+
+        <div class="g4">
+          <h2 style="color:#ffcd93">Facts</h2>
+          <ul class="bulletpoint">
+           <li><p>Mercury is the planet that orbits the closest to the Sun.</p></li>
+           <li><p>Mercury is the smallest planet in our solar system – only slightly larger than Earth's Moon. </p></li>
+           <li><p>Mercury is the fastest planet in our solar system – traveling through space at nearly 29 miles (47 kilometers) per second. Since Mercury is the fastest planet and has the shortest distance to travel around the Sun, it has the shortest year of all the planets in our solar system – 88 days.
+          </p></li>
+          </ul>
+        </div>
+
+
+        <div class="rect"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+
+    </div>
+
+
+
+    <!--home logo-->
+    <div class="homeicon">
+      <i class="fi fi-ss-world"></i>
+    </div>
+
+    <!--buttons-->
+    <div class="iconright">
+      <i class="fi fi-ss-angle-right"></i>
+    </div>
+    <a href="{{ url_for('venus') }}" class="buttonright"></a>
+
+    <div class="iconleft">
+      <i class="fi fi-ss-angle-left"></i>
+    </div>
+    <a href="{{ url_for('earth') }}" class="buttonleft"></a>
+
+<h4>W h i r o</h4>
+
+  </body>
+
+</html>
+
+{% endblock %}
