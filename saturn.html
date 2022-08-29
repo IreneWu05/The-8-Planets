@@ -1,0 +1,159 @@
+{% block title %}The Eight Planets - Saturn{% endblock %}
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Eight Planets - Saturn</title>
+    <meta name="description" content="This is an online web app that allows people to learn about the 8 Planets of the Solar System" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='pages.css') }}" >
+
+      <!--import google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@100&family=Roboto:wght@100;300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+      
+      <!--import icon library from flaticon-->
+      <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  
+  
+    </head>
+    {% block content %}
+
+  <body>
+   
+    <section> 
+      <!--earth animation-->
+        <div class="saturn">
+            <div></div>
+        </div>
+    </section>  
+    
+    <!--website name-->
+    <a href="{{ url_for('index') }}" class="home"><h3>The <b>8 Planets</b></h3></a>
+       
+    <!--grid-->
+    <div class="wrapper">
+      <div class="g1">
+        <h1 style="background: -webkit-linear-gradient(#a8771c, #d1ecf6);
+                   -webkit-background-clip: text;
+                   -webkit-text-fill-color: transparent;">Saturn</h1>
+      </div>
+      
+      <div class="g2">
+        <h2 style="color:#cbbe94"> About Saturn</h2>
+        <p>Saturn is the sixth planet from the Sun and the second-largest planet in our solar system.
+            Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings – made of chunks of ice and rock – but none are as spectacular or as complicated as Saturn's.            
+        </p>
+        <a href="https://solarsystem.nasa.gov/planets/saturn/overview/"><p>Learn more ⌲</p></a>
+      </div>
+     
+      
+        <div class="g3">
+          <h2 style="color:#cbbe94">Basic Statistics </h2>
+          
+          
+          <table>
+            <h5 style="color:#cbbe94">Length of Year on Saturn</h5>
+
+            {% for col in items %}
+            <tr>
+              <td><p class="p1">{{ col['rotatetime'] }}</p></td>
+            </tr>
+            {% endfor %}
+            </table>
+
+            
+            <div class="gap">
+              <table>
+                <h5 style="color:#cbbe94">Length of Day on Saturn</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['daylength'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+            
+              
+              <table>
+                <h5 style="color:#cbbe94">Discovered Year</h5>
+                {% for col in items %}
+                <tr>
+                  <td><p class="p1">{{ col['discoveredtime'] }}</p></td>
+                </tr>
+                {% endfor %}
+                </table>
+
+      
+                <table>
+                  <h5 style="color:#cbbe94">Distance From Sun (km)</h5>
+                  {% for col in items %}
+                  <tr>
+                    <td><p class="p1">{{ col['distance'] }}</p></td>
+                  </tr>
+                  {% endfor %}
+                  </table>
+      
+
+          <table>
+          <h5 style="color:#cbbe94">Diameter (km)</h5>
+          {% for col in items %}
+          <tr>
+            <td><p class="p1">{{ col['diameter'] }}</p></td>
+          </tr>
+          {% endfor %}
+          </table>
+
+          
+         
+        </div><!--end of gap-->
+        </div><!--end of g3-->
+      
+        
+
+        <div class="g4">
+          <h2 style="color:#cbbe94">Facts</h2>
+          <ul class="bulletpoint">
+           <li><p>Saturn is a gas-giant planet and therefore does not have a solid surface like Earth’s. But it might have a solid core somewhere in there.</p></li>
+           <li><p>Saturn has the most spectacular ring system, with seven rings and several gaps and divisions between them.</p></li>
+           <li><p>Saturn is the sixth planet from our Sun (a star) and orbits at a distance of about 886 million miles (1.4 billion kilometers) from the Sun.</p></li>
+          </ul>
+        </div>
+
+
+        <div class="rect"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+
+    </div>
+
+
+
+    <!--home logo-->
+    <div class="homeicon">
+      <i class="fi fi-ss-world"></i>
+    </div>
+
+    <!--buttons-->
+    <div class="iconright">
+      <i class="fi fi-ss-angle-right"></i>
+    </div>
+    <a href="{{ url_for('uranus') }}" class="buttonright"></a>
+
+    <div class="iconleft">
+      <i class="fi fi-ss-angle-left"></i>
+    </div>
+    <a href="{{ url_for('jupiter') }}" class="buttonleft"></a>
+
+<h4>P a r e ā r a u</h4>
+
+  </body>
+
+</html>
+
+{% endblock %}
